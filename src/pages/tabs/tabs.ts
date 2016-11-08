@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 
-import { HomePage } from '../home/home';
-import { MyBeersPage } from '../myBeers/myBeers';
-import { MyFriendsPage } from '../myFriends/myFriends';
+
+import { MyBeersPage } from '../my-beers/my-beers';
+import { AddBeerPage } from '../add-beer/add-beer';
+import { MyListsPage } from '../my-lists/my-lists';
 import { MyProfilePage } from '../myProfile/myProfile';
 
 @Component({
@@ -11,9 +12,9 @@ import { MyProfilePage } from '../myProfile/myProfile';
 export class TabsPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  tab1Root: any = HomePage;
-  tab2Root: any = MyBeersPage;
-  tab3Root: any = MyFriendsPage;
+  tab1Root: any = MyBeersPage;
+  tab2Root: any = AddBeerPage;
+  tab3Root: any = MyListsPage;
   tab4Root: any = MyProfilePage;
 
   constructor() {

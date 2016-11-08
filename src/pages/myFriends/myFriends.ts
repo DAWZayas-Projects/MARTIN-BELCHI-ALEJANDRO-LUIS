@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
-import { MyBeersPage } from '../myBeers/myBeers';
+import { AddFriendPage } from '../add-friend/add-friend';
 
 @Component({
   selector: 'page-myFriends',
@@ -15,9 +15,9 @@ export class MyFriendsPage {
   }
 
   nav(){
-	this.navCtrl.push(MyBeersPage);
-  	console.log('Hola');
+	this.navCtrl.push(AddFriendPage);
   }
 
 
 }
+ 

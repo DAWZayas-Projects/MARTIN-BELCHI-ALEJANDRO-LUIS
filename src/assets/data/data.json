@@ -1,0 +1,43 @@
+{
+
+	"users": {
+		"Letzgar": [
+			{
+				"name": "Letzgar",
+				"password": "mypw",
+				"beers": [
+ 					{
+						"name": "Celebrator" ,
+						"brewery": "Ayinger" ,
+						"style": "Doppelbock"
+					},
+					{
+						"name": "Aventinus Bock",
+						"brewery": "Schneider",
+						"style": "Doppelbock" 
+					},
+					{
+						"name": "Rochefort 10",
+						"brewery": "Abadia de Rochefort",
+						"style": "Trapense" 
+					},
+				],
+				"beerLists": {
+					"Cervezas Oscuras": {
+						"Celebrator": {
+							"name": "Celebrator" ,
+							"brewery": "Ayinger" ,
+							"style": "Doppelbock"
+						},
+						"Aventinus Bock": {
+							"name": "Aventinus Bock",
+							"brewery": "Schneider",
+							"style": "Doppelbock" 
+						}
+					}
+				}
+			}
+		] 
+	}
+
+} 
