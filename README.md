@@ -9,10 +9,16 @@
 
 *TypeScript - https://www.typescriptlang.org/
 
-# Necesitamos instalar ionic en nuestra equipo:
+# Necesitamos instalar Ionic y Mongo DB en nuestro equipo
 
 ```bash
 http://ionicframework.com/
+https://www.mongodb.com/es
+```
+# Necesitamos instalarnos como backend la siguiente api rest
+
+```bash
+https://github.com/Letzgar/Api-rest 
 ```
 
 # Para instalarla
