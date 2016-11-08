@@ -9,6 +9,12 @@
 
 *TypeScript - https://www.typescriptlang.org/
 
+# Necesitamos instalar ionic en nuestra equipo:
+
+```bash
+http://ionicframework.com/
+```
+
 # Para instalarla
 
 ```bash
@@ -18,7 +24,7 @@
 # Para iniciarla
 
 ```bash
-	npm Start
+	ionic serve
 ```
 
 @Alejandro Martin
