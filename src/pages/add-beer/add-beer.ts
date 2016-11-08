@@ -21,6 +21,7 @@ export class AddBeerPage {
   	this.submitted = true;
 
   	if (form.valid) {
+      this.beer.favorite = false;
       this.beerData.saveBeer(this.beer);
   	}
   }
