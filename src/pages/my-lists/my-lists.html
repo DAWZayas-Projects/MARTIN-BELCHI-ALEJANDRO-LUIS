@@ -4,12 +4,27 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>addFriend</ion-title>
+    <ion-title>Mis Listas</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="goToAddListPage()">
+        <ion-icon name="add" md="md-options"></ion-icon>
+      </button>
+    </ion-buttons>
+
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-card *ngFor="let list of lists">
+    <ion-card-content>
+      <ion-card-title>
+        {{list.name}}
+      </ion-card-title>
+      <p>
+       {{list.description}}
+      </p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

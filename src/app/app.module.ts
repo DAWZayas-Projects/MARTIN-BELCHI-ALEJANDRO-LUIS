@@ -11,10 +11,11 @@ import { MyProfilePage } from '../pages/myProfile/myProfile';
 import { AddBeerPage } from '../pages/add-beer/add-beer';
 import { TabsPage } from '../pages/tabs/tabs';
 // import { AddFriendPage } from '../pages/add-friend/add-friend';
-// import { AddBeerPage } from '../pages/add-beer/add-beer';
+import { AddListPage } from '../pages/add-list/add-list';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 
-import { BeerData } from '../providers/beer-data'; 
+import { BeerData } from '../providers/beer-data';
+import { ListData } from '../providers/list-data';  
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { BeerData } from '../providers/beer-data';
     MyApp,
     MyBeersPage,
     MyListsPage,
+    AddListPage,
     MyProfilePage,
     AddBeerPage,
     TabsPage,
@@ -35,11 +37,12 @@ import { BeerData } from '../providers/beer-data';
     MyApp,
     MyBeersPage,
     MyListsPage,
+    AddListPage,
     MyProfilePage,
     AddBeerPage,
     TabsPage,
     TutorialPage
   ],
-  providers: [ BeerData, Storage ]
+  providers: [ BeerData, ListData, Storage ]
 })
 export class AppModule {}

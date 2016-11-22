@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Añadir una Lista</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-list inset>
+	  <ion-item>
+	    <ion-input [(ngModel)]="name" placeholder="Nombre de la lista" type="text"></ion-input>
+	  </ion-item>
+	  <ion-item>
+	    <ion-textarea [(ngModel)]="description" placeholder="Descripción"></ion-textarea>
+	  </ion-item>
+	</ion-list>
+	<button ion-button (click)="save()">Añadir lista</button>
+
+	  <ion-list>
+    <ion-list-header>Agregar cervezas a la lista:</ion-list-header>
+    <ion-item *ngFor="let beer of beers">
+      <span item-left class="dot"></span>
+      <ion-label>{{beer.name}}</ion-label>
+      <ion-toggle color="secondary" [(ngModel)]="beer.isChecked" ></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

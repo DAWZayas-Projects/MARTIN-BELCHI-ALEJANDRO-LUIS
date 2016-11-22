@@ -31,7 +31,6 @@ export class MyBeersPage implements OnInit {
       beers => this.segment === 'all' ? this.beers = beers : this.beers = beers.filter( beer => beer.favorite ),
       error => console.log(error)
     );
-    console.log(this.beers)
   }
 
   updateBeers(){
