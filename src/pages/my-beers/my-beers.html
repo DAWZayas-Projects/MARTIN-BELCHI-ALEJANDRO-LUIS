@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+
+    <ion-segment [(ngModel)]="segment" (ionChange)="load()">
+      <ion-segment-button value="all">
+        Todas
+      </ion-segment-button>
+      <ion-segment-button value="favorites">
+        Favoritas
+      </ion-segment-button>
+    </ion-segment>
+
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-searchbar color="primary"
+                   [(ngModel)]="queryText"
+                   (ionInput)="updateBeers()"
+                   placeholder="Buscar cerveza">
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item-sliding #slidingItem *ngFor="let beer of beers" >
+      <button ion-item (click)="goToBeerDetails(beer)">
+        <p><b>{{beer.brewery}}</b> {{beer.name}}</p>
+        <p>{{beer.country}}</p>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="favorite" (click)="toogleFavorite(true,beer)" *ngIf="beer.favorite === false">
+          Añadir a Favoritos
+        </button>
+        <button ion-button color="danger" (click)="toogleFavorite(false,beer)" *ngIf="beer.favorite === true">
+          Quitar de Favoritos
+        </button>
+      </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Mis Listas</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="goToAddListPage()">
+        <ion-icon name="add" md="md-options"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let list of lists" (click)="goToSelectedList(list)">
+    <ion-card-content>
+      <ion-card-title text-center>
+        {{list.name}}
+      </ion-card-title>
+      <p>{{list.description}}</p>
+      <p text-center>{{list.beers.length}} Cervezas</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

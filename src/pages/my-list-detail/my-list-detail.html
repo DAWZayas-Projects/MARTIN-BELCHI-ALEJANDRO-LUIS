@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Mi Lista
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div [hidden]="editing == true">
+		<div text-center>
+			<b>{{list.name}}</b>
+			<p>{{list.description}}</p>
+		</div>
+		<ion-list no-lines>
+		  <ion-item *ngFor="let beer of list.beers">
+		  <p><b>{{beer.brewery}}</b> {{beer.name}}</p>
+		  <p>{{beer.country}}, {{beer.style}} </p>
+		  </ion-item>
+		</ion-list>
+		 <ion-row responsive-sm>
+	  	<ion-col>
+	   	 <button ion-button (click)="startEditing(true)" block>Modificar</button>
+	  	</ion-col>
+	  	<ion-col>
+	  		<button ion-button (click)="deleteList()" outline block navPop>Borrar</button>
+	  	</ion-col>
+		</ion-row>
+	</div>
+
+	<div  [hidden]="editing == false">
+		<ion-list inset>
+		  <ion-item>
+		    <ion-input  placeholder="Nombre de la lista" [(ngModel)]="list.name" type="text"></ion-input>
+		  </ion-item>
+		  <ion-item>
+		    <ion-textarea placeholder="Descripción" [(ngModel)]="list.description" ></ion-textarea>
+		  </ion-item>
+		</ion-list>
+
+		<ion-list>
+	    <ion-list-header>Cervezas de la lista:</ion-list-header>
+	    <ion-item *ngFor="let beer of list.beers">
+	      <ion-label><p><b>{{beer.brewery}}</b> {{beer.name}}</p></ion-label>
+	      <ion-toggle [(ngModel)]="beer.isChecked" ></ion-toggle>
+	    </ion-item>
+	  </ion-list>
+
+		 <ion-list>
+	    <ion-list-header>Agregar cervezas a la lista:</ion-list-header>
+	    <ion-item *ngFor="let beer of beers">
+	      <ion-label><p><b>{{beer.brewery}}</b> {{beer.name}}</p></ion-label>
+	      <ion-toggle [(ngModel)]="beer.isChecked" ></ion-toggle>
+	    </ion-item>
+	  </ion-list>
+
+	  <ion-row responsive-sm>
+			<ion-col>
+	   		<button ion-button (click)="updateList()" block>Modificar la lista</button>
+	  	</ion-col>
+	  	<ion-col>
+      	<button ion-button (click)="startEditing(false)" outline block>Cancelar</button>
+    	</ion-col>
+	  </ion-row>
+
+	</div>
+
+</ion-content>
