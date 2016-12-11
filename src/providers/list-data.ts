@@ -3,7 +3,7 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
 
-const BASE_URL = 'http://localhost:3001/api';
+const BASE_URL = 'http://193.70.88.47:3001/api';
 
 
 @Injectable()
@@ -21,7 +21,7 @@ export class ListData {
     console.log(list);
       this.http.post(BASE_URL+'/pushlist', list).subscribe(
         response => console.log(response),
-        error => this.handleError(error) 
+        error => this.handleError(error)
       );
   }
 
@@ -42,6 +42,6 @@ export class ListData {
   handleError(error: any){
     console.log(error);
     return Observable.throw("Server error (" + error.status + "): " + error.text())
-  }  
+  }
 
 }

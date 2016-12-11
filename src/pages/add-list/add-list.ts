@@ -3,9 +3,6 @@ import { NavController, ToastController } from 'ionic-angular';
 import { BeerData } from '../../providers/beer-data';
 import { ListData } from '../../providers/list-data';
 import { Beer } from '../../models/beer-model';
-import { List } from '../../models/list-model';
-
-
 
 @Component({
   selector: 'page-add-list',

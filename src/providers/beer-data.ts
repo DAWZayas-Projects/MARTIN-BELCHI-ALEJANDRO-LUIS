@@ -3,9 +3,7 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
 
-import { Beer } from '../model/beer.model';
-
-const BASE_URL = 'http://localhost:3001/api';
+const BASE_URL = 'http://193.70.88.47:3001/api';
 
 
 @Injectable()
@@ -23,7 +21,7 @@ export class BeerData {
     console.log(beer);
       this.http.post(BASE_URL+'/pushbeer', beer).subscribe(
         response => this.load(),
-        error => this.handleError(error) 
+        error => this.handleError(error)
       );
   }
 
@@ -36,6 +34,6 @@ export class BeerData {
   handleError(error: any){
     console.log(error);
     return Observable.throw("Server error (" + error.status + "): " + error.text())
-  }  
+  }
 
 }

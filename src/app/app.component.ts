@@ -4,10 +4,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { TutorialPage } from '../pages/tutorial/tutorial';
 
-import { MyListDetailPage } from '../pages/my-list-detail/my-list-detail';
 import { ListData } from '../providers/list-data';
-import { List } from '../models/list-model';
-
 
 @Component({
   templateUrl: `app.template.html`
