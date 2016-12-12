@@ -17,7 +17,7 @@ http://ionicframework.com/
 # Esta versión, el acceso a la Api es online, para usarla offline necesitamos instalarnos como backend la siguiente api rest y movernos a la rama Offline:
 
 ```bash
-https://github.com/Letzgar/Api-rest 
+https://github.com/Letzgar/Api-Rest-BeerTry 
 ```
 
 # Para instalarla
