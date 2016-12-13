@@ -3,8 +3,7 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
 
-const BASE_URL = 'http://193.70.88.47:3001/api';
-
+const BASE_URL = 'http://localhost:3001/api';
 
 @Injectable()
 export class BeerData {
