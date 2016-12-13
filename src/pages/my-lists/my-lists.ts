@@ -24,7 +24,6 @@ export class MyListsPage {
   }
 
   goToAddListPage() {
-    console.log(this.lists);
     this.navCtrl.push(AddListPage);
   }
 

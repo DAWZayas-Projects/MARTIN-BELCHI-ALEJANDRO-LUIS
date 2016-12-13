@@ -25,7 +25,6 @@ export class MyBeersPage {
   }
 
   ionViewWillEnter() {
-    console.log('Cargando Datos');
     this.load();
   }
 

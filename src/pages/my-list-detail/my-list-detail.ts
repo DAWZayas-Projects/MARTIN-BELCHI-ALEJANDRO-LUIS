@@ -41,7 +41,6 @@ export class MyListDetailPage {
 
   deleteListBeers(beers) {
     this.beers = beers.filter(beer => !this.searchInArray(beer));
-    console.log(this.list);
   }
 
   searchInArray(beer) {

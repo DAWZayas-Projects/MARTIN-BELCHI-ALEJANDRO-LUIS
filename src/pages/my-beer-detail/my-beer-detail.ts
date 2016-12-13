@@ -14,7 +14,6 @@ export class MyBeerDetailPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   	this.beer = this.navParams.data;
-  	console.log(this.beer);
   }
 
 }

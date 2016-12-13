@@ -18,7 +18,6 @@ export class BeerData {
   }
 
   saveBeer(beer){
-    console.log(beer);
       this.http.post(BASE_URL+'/pushbeer', beer).subscribe(
         response => this.load(),
         error => this.handleError(error)
@@ -32,7 +31,6 @@ export class BeerData {
   }
 
   handleError(error: any){
-    console.log(error);
     return Observable.throw("Server error (" + error.status + "): " + error.text())
   }
 
